@@ -1,5 +1,6 @@
 import requests
 import smtplib
+import time
 from email.mime.text import MIMEText
 
 
@@ -49,6 +50,7 @@ Web service is down. Take responsibility for your actions -_-
 # The logic of script
 
 while True:
+    time.sleep(60)
     if web_healthy(url):
         print('Web service is up')
         loop = False
